@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 import './home_screen.dart';
+import './on_boarding_screen.dart';
 
 
 class UrbanMarketSplashScreen extends  StatelessWidget {
@@ -9,7 +10,7 @@ class UrbanMarketSplashScreen extends  StatelessWidget {
 	Widget build(BuildContext context){
 		return new SplashScreen(
 	      seconds: 5,
-	      navigateAfterSeconds: new HomeScreen(),
+	      navigateAfterSeconds: new OnBoardingScreen(),
 	      title: new Text(
 	        'Urban Market',
 	        style: new TextStyle(

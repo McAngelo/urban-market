@@ -17,7 +17,7 @@ class UrbanMarketApp extends  StatefulWidget {
   _MyAppState createState() => new  _MyAppState();
 }
 
-class _MyAppState extends State<UrbanMarketApp>  {
+class _MyAppState extends State<UrbanMarketApp> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context){
     return new UrbanMarketSplashScreen();
