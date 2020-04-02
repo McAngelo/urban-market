@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import './on_boarding_util/ui/widgets/custom_flat_button.dart';
 
-class OnBoardingScreen extends StatelessWidget{
+class AuthScreen extends StatelessWidget{
 
 	Widget build(BuildContext context) {
     return Scaffold(

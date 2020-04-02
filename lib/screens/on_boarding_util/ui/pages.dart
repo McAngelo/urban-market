@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 final pages = [
 	new PageViewModel(
@@ -105,4 +105,4 @@ class Page extends StatelessWidget {
 			)
 		);
 	}
-}
+}*/

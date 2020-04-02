@@ -1,4 +1,4 @@
-import 'dart:math';
+/*import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -50,4 +50,4 @@ class CircleRevealClipper extends CustomClipper<Rect>{
     return true;
   }
 
-}
+}*/
