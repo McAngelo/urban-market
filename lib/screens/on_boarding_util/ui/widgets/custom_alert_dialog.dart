@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '.custom_flat_button.dart';
+import './custom_flat_button.dart';
 
 class CustomAlertDialog extends StatelessWidget {
   final String title;
