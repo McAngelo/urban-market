@@ -23,7 +23,7 @@ class UrbanMarketSplashScreen extends  StatelessWidget {
 	      styleTextUnderTheLoader: new TextStyle(),
 	      photoSize: 100.0,
 	      onClick: () => print('CodAfric Engineer'),
-	      loaderColor: Colors.red
+	      loaderColor: Colors.blue
 	    );;
 	}
 }

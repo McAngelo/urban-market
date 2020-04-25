@@ -71,6 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
+    //setState(() => this.context = context);
     return WillPopScope(
       onWillPop: onBackPress,
       child: Scaffold(
@@ -126,11 +127,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontWeight: FontWeight.w700,
                         textColor: Colors.blue[900],
                         onPressed: () {
-                          _signUp(
+                          /*_signUp(
                               fullname: _fullname.text,
                               email: _email.text,
                               number: _number.text,
-                              password: _password.text);
+                              password: _password.text);*/
+                          Navigator.of(context).pushNamed("/home");
                         },
                         splashColor: Colors.black12,
                         borderColor: Colors.blue[900],
@@ -175,6 +177,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
     });
   }
 
+  void _proceedToHome() {
+    setState(() {
+      _blackVisible = !_blackVisible;
+    });
+
+  }
+
   void _signUp(
       {String fullname,
       String number,
@@ -194,11 +203,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
         try {
           SystemChannels.textInput.invokeMethod('TextInput.hide');
           _changeBlackVisible();
-          _showErrorAlert(
+          /*_showErrorAlert(
             title: "Signup Successful",
             content: 'You tried to signup here',
             onPressed: _changeBlackVisible,
-          );
+          );*/
+          Navigator.of(context).pushNamed("/home");
           /*await Auth.signUp(email, password).then((uID) {
             Auth.addUser(new User(
                 userID: uID,
