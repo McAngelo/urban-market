@@ -1,9 +1,25 @@
 import 'package:flutter/material.dart';
 
+
+/*class HomeScreen extends StatefulWidget {
+	const HomeScreen({Key key }): super(key: key);
+
+	@override
+	State<StatefulWidget> createState() => _HomeScreenState();
+}*/
 class HomeScreen extends  StatelessWidget {
 	HomeScreen({Key key}): super(key: key);
 
 	int _currentTabIndex = 0;
+
+	void _setState(int index) {
+	    /*setState(() {
+	      _blackVisible = !_blackVisible;
+	    });*/
+	    _currentTabIndex = index;
+
+	    print(_currentTabIndex);
+	}
 
 	@override
 	Widget build(BuildContext context){
@@ -68,16 +84,6 @@ class HomeScreen extends  StatelessWidget {
 			]
 		);
 
-		/*new Center(
-		        child: new Text(
-		          'Done!',
-		          style: new TextStyle(
-		            fontWeight: FontWeight.bold,
-		            fontSize: 30.0
-		          ),
-		        ),
-	      	)*/
-
 		final _kTabPages = <Widget>[
 			Center(
 				//child: Icon(Icons.cloud, size: 64.0, color: Colors.teal),
@@ -111,8 +117,11 @@ class HomeScreen extends  StatelessWidget {
 	    		/*setState((){
 	    			_currentTabIndex = index;
 	    		});*/
+	    		print(index);
 
-	    		_currentTabIndex = index;
+	    		_setState(index);
+
+	    		//_currentTabIndex = index;
 	    	}
 	    );
 
@@ -128,7 +137,7 @@ class HomeScreen extends  StatelessWidget {
 		        	),
 	        	],
 	      	),
-	      	body: _kTabPages[_currentTabIndex],
+	      	body: _kTabPages[this._currentTabIndex],
 	      	drawer: Drawer(
 	      		child: drawerItems,
 	      	),
