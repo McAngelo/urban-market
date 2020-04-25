@@ -29,27 +29,38 @@ class HomeScreen extends  StatelessWidget {
 			children: <Widget>[
 				drawerHeader,
 				ListTile(
+					leading: Icon(Icons.location_on),
 					title: Text('Your Location'),
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 				ListTile(
+					leading: Icon(Icons.business),
 					title: Text('Shops'),
 					onTap: () => Navigator.of(context).push(_NewPage(2)),
 				),
 				ListTile(
+					leading: Icon(Icons.more_vert),
 					title: Text('Deals'),
 					onTap: () => Navigator.of(context).push(_NewPage(3)),
 				),
 				ListTile(
+					leading: Icon(Icons.more_vert),
 					title: Text('Orders'),
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 				ListTile(
+					leading: Icon(Icons.more_vert),
 					title: Text('Account'),
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 				ListTile(
+					leading: Icon(Icons.more_vert),
 					title: Text('Address Book'),
+					onTap: () => Navigator.of(context).push(_NewPage(1)),
+				),
+				ListTile(
+					leading: Icon(Icons.more_vert),
+					title: Text('Settings'),
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 			]
