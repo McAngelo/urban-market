@@ -14,7 +14,7 @@ void main() {
         //'/walkthrough': (BuildContext context) => new WalkthroughScreen(),
         '/auth': (BuildContext context) => new AuthScreen(),
         '/signin': (BuildContext context) => new SignInScreen(),
-        //'/signup': (BuildContext context) => new SignUpScreen(),
+        '/signup': (BuildContext context) => new SignUpScreen(),
         //'/main': (BuildContext context) => new MainScreen(),
         '/welcome': (BuildContext context) => new WelcomeScreen(),
       },

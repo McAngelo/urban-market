@@ -99,10 +99,10 @@ class _SignInScreenState extends State<SignInScreen> {
                               email: _email.text,
                               password: _password.text,
                               context: context);*/
-                          _blackVisible = true;
+                          _changeBlackVisible();
                           _showErrorAlert(
                             title: "Email Login",
-                            content: "You have tried to login",
+                            content: "You have tried Email login",
                             onPressed: _changeBlackVisible,
                           );
                         },
@@ -137,10 +137,10 @@ class _SignInScreenState extends State<SignInScreen> {
                         textColor: Colors.white,
                         onPressed: () {
                           //_facebookLogin(context: context);
-                          _blackVisible = true;
+                          _changeBlackVisible();
                           _showErrorAlert(
                             title: "Facebook Login",
-                            content: "You have tried fasebook login",
+                            content: "You have tried Facebook login",
                             onPressed: _changeBlackVisible,
                           );
                         },
