@@ -10,7 +10,7 @@ class UrbanMarketSplashScreen extends  StatelessWidget {
 	@override
 	Widget build(BuildContext context){
 		return new SplashScreen(
-	      seconds: 15,
+	      seconds: 5,
 	      navigateAfterSeconds: new OnBoardingScreen(),
 	      title: new Text(
 	        'Urban Market',

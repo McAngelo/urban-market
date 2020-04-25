@@ -89,7 +89,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         softWrap: true,
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                          color: Color.fromRGBO(212, 20, 15, 1.0),
+                          color: Colors.blue[900],
                           decoration: TextDecoration.none,
                           fontSize: 24.0,
                           fontWeight: FontWeight.w700,
@@ -124,7 +124,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         title: "Sign Up",
                         fontSize: 22,
                         fontWeight: FontWeight.w700,
-                        textColor: Colors.white,
+                        textColor: Colors.blue[900],
                         onPressed: () {
                           _signUp(
                               fullname: _fullname.text,
@@ -133,9 +133,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               password: _password.text);
                         },
                         splashColor: Colors.black12,
-                        borderColor: Color.fromRGBO(59, 89, 152, 1.0),
+                        borderColor: Colors.blue[900],
                         borderWidth: 0,
-                        color: Color.fromRGBO(59, 89, 152, 1.0),
+                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -181,10 +181,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
       String email,
       String password,
       BuildContext context}) async {
+      print(fullname);
+      print(number);
+      print(email);
+      print(password);
     if (Validator.validateName(fullname) &&
         Validator.validateEmail(email) &&
         Validator.validateNumber(number) &&
         Validator.validatePassword(password)) {
+      print("we are about to tried this out");
       try {
         SystemChannels.textInput.invokeMethod('TextInput.hide');
         _changeBlackVisible();
