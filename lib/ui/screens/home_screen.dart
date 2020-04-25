@@ -24,6 +24,13 @@ class HomeScreen extends  StatelessWidget {
 				),
 			]
 		);
+
+		final drawerItems = ListView(
+			children: <Widget>[
+				drawerHeader
+			]
+		);
+
 		return new Scaffold(
 	      	appBar: new AppBar(
 	      		backgroundColor: Colors.blue[900],
