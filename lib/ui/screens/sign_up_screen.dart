@@ -127,12 +127,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontWeight: FontWeight.w700,
                         textColor: Colors.blue[900],
                         onPressed: () {
-                          /*_signUp(
+                          _signUp(
                               fullname: _fullname.text,
                               email: _email.text,
                               number: _number.text,
-                              password: _password.text);*/
-                          Navigator.of(context).pushNamed("/home");
+                              password: _password.text,
+                              context: context);
+                          //Navigator.of(context).pushNamed("/home");
                         },
                         splashColor: Colors.black12,
                         borderColor: Colors.blue[900],
@@ -202,12 +203,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         print("we are about to tried this out");
         try {
           SystemChannels.textInput.invokeMethod('TextInput.hide');
-          _changeBlackVisible();
-          /*_showErrorAlert(
-            title: "Signup Successful",
-            content: 'You tried to signup here',
-            onPressed: _changeBlackVisible,
-          );*/
+          //_changeBlackVisible();
           Navigator.of(context).pushNamed("/home");
           /*await Auth.signUp(email, password).then((uID) {
             Auth.addUser(new User(
