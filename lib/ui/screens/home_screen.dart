@@ -34,7 +34,6 @@ class HomeScreen extends  StatelessWidget {
 		return new Scaffold(
 	      	appBar: new AppBar(
 	      		backgroundColor: Colors.blue[900],
-	      		leading: Icon(Icons.home),
 	        	title: new Text('Urban Market'),
 	        	automaticallyImplyLeading: true,
 	        	actions: <Widget>[
@@ -54,6 +53,7 @@ class HomeScreen extends  StatelessWidget {
 		        ),
 	      	),
 	      	drawer: Drawer(
+	      		child: drawerItems,
 	      	)
 	    );
 	}
