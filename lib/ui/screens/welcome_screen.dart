@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import './on_boarding_util/ui/widgets/custom_flat_button.dart';
+import '../widgets/custom_flat_button.dart';
 
-class AuthScreen extends StatelessWidget{
+class WelcomeScreen extends StatelessWidget{
 
 	Widget build(BuildContext context) {
     return Scaffold(

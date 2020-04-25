@@ -1,10 +1,19 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import './screens/splash_screen.dart';
+import './ui/screens/splash_screen.dart';
+import './ui/screens/auth_screen.dart';
 
 void main() {
   runApp(new  MaterialApp(
+    debugShowCheckedModeBanner: false,
+    routes: <String, WidgetBuilder>{
+        //'/walkthrough': (BuildContext context) => new WalkthroughScreen(),
+        '/auth': (BuildContext context) => new AuthScreen(),
+        //'/signin': (BuildContext context) => new SignInScreen(),
+        //'/signup': (BuildContext context) => new SignUpScreen(),
+        //'/main': (BuildContext context) => new MainScreen(),
+      },
     theme: new ThemeData(
       primarySwatch: Colors.green,
     ),

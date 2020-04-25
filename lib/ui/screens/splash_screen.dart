@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
-
-import './home_screen.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 import './on_boarding_screen.dart';
 
 
 class UrbanMarketSplashScreen extends  StatelessWidget {
+	/*final SharedPreferences prefs;
+	UrbanMarketSplashScreen({this.prefs});*/
 	@override
 	Widget build(BuildContext context){
 		return new SplashScreen(
-	      seconds: 5,
+	      seconds: 15,
 	      navigateAfterSeconds: new OnBoardingScreen(),
 	      title: new Text(
 	        'Urban Market',
