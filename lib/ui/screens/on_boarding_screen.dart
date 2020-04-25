@@ -154,16 +154,16 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   title: "Get Started",
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
-                  textColor: Colors.white,
+                  textColor: Colors.black54,
                   onPressed: () {
                     //widget.prefs.setBool('seen', true);
-                    Navigator.of(context).pushNamed("/auth");
+                    Navigator.of(context).pushNamed("/welcome");
 
                   },
                   splashColor: Colors.black12,
                   borderColor: Colors.white,
                   borderWidth: 2,
-                  color: Color.fromRGBO(212, 20, 15, 1.0),
+                  color: Colors.white,
                 ),
               ),
             ],

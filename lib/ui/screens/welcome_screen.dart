@@ -11,21 +11,17 @@ class WelcomeScreen extends StatelessWidget{
       body: new ListView(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 60.0),
-            child: Icon(
-              Icons.phone_iphone,
-              color: Color.fromRGBO(212, 20, 15, 1.0),
-              size: 125.0,
-            ),
+            padding: const EdgeInsets.all(20.0),
+            child: Image.asset('assets/logo/market_256.png'),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 35.0, right: 15.0, left: 15.0),
+            padding: const EdgeInsets.only(top: 15.0, right: 15.0, left: 15.0),
             child: Text(
-              "Say Hello To Your New App!",
+              "Welcome to Urban Market!",
               softWrap: true,
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Color.fromRGBO(212, 20, 15, 1.0),
+                color: Colors.blue[900],
                 decoration: TextDecoration.none,
                 fontSize: 24.0,
                 fontWeight: FontWeight.w700,
@@ -36,7 +32,7 @@ class WelcomeScreen extends StatelessWidget{
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              "You've just saved a week of development and headaches.",
+              "Buy and Sell in an Urban style.",
               softWrap: true,
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -60,9 +56,9 @@ class WelcomeScreen extends StatelessWidget{
                 Navigator.of(context).pushNamed("/signin");
               },
               splashColor: Colors.black12,
-              borderColor: Color.fromRGBO(212, 20, 15, 1.0),
+              borderColor: Colors.blue[900],
               borderWidth: 0,
-              color: Color.fromRGBO(212, 20, 15, 1.0),
+              color: Colors.blue[900],
             ),
           ),
           Padding(
