@@ -27,7 +27,12 @@ class HomeScreen extends  StatelessWidget {
 
 		final drawerItems = ListView(
 			children: <Widget>[
-				drawerHeader
+				drawerHeader,
+				ListTile(
+					//icon: Icon(Icons.search),
+					title: Text('Your Location'),
+					onTap: () => Navigator.of(context).push(_NewPage(1)),
+				),
 			]
 		);
 
