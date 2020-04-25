@@ -39,29 +39,29 @@ class HomeScreen extends  StatelessWidget {
 					onTap: () => Navigator.of(context).push(_NewPage(2)),
 				),
 				ListTile(
-					leading: Icon(Icons.more_vert),
+					leading: Icon(Icons.thumbs_up_down),
 					title: Text('Deals'),
 					onTap: () => Navigator.of(context).push(_NewPage(3)),
 				),
 				ListTile(
-					leading: Icon(Icons.more_vert),
+					leading: Icon(Icons.list),
 					title: Text('Orders'),
-					onTap: () => Navigator.of(context).push(_NewPage(1)),
+					onTap: () => Navigator.of(context).push(_NewPage(4)),
 				),
 				ListTile(
 					leading: Icon(Icons.account_circle),
 					title: Text('Account'),
-					onTap: () => Navigator.of(context).push(_NewPage(1)),
+					onTap: () => Navigator.of(context).push(_NewPage(5)),
 				),
 				ListTile(
 					leading: Icon(Icons.library_books),
 					title: Text('Address Book'),
-					onTap: () => Navigator.of(context).push(_NewPage(1)),
+					onTap: () => Navigator.of(context).push(_NewPage(6)),
 				),
 				ListTile(
 					leading: Icon(Icons.settings_applications),
 					title: Text('Settings'),
-					onTap: () => Navigator.of(context).push(_NewPage(1)),
+					onTap: () => Navigator.of(context).push(_NewPage(7)),
 				),
 			]
 		);
