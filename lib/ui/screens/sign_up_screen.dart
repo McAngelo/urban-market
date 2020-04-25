@@ -185,36 +185,48 @@ class _SignUpScreenState extends State<SignUpScreen> {
       print(number);
       print(email);
       print(password);
-    if (Validator.validateName(fullname) &&
+      /*Validator.validateName(fullname) &&
         Validator.validateEmail(email) &&
         Validator.validateNumber(number) &&
-        Validator.validatePassword(password)) {
-      print("we are about to tried this out");
-      try {
-        SystemChannels.textInput.invokeMethod('TextInput.hide');
-        _changeBlackVisible();
-        _showErrorAlert(
-          title: "Signup failed",
-          content: 'You tried to signup here',
-          onPressed: _changeBlackVisible,
-        );
-        /*await Auth.signUp(email, password).then((uID) {
-          Auth.addUser(new User(
-              userID: uID,
-              email: email,
-              firstName: fullname,
-              profilePictureURL: ''));
-          onBackPress();
-        });*/
-      } catch (e) {
-        print("Error in sign up: $e");
-        //String exception = Auth.getExceptionText(e);
-        _showErrorAlert(
-          title: "Signup failed",
-          content: 'Something went very wrong',//exception,
-          onPressed: _changeBlackVisible,
-        );
-      }
+        Validator.validatePassword(password)*/
+    if (email.length > 0) {
+        print("we are about to tried this out");
+        try {
+          SystemChannels.textInput.invokeMethod('TextInput.hide');
+          _changeBlackVisible();
+          _showErrorAlert(
+            title: "Signup Successful",
+            content: 'You tried to signup here',
+            onPressed: _changeBlackVisible,
+          );
+          /*await Auth.signUp(email, password).then((uID) {
+            Auth.addUser(new User(
+                userID: uID,
+                email: email,
+                firstName: fullname,
+                profilePictureURL: ''));
+            onBackPress();
+          });*/
+        } catch (e) {
+          print("Error in sign up: $e");
+          //String exception = Auth.getExceptionText(e);
+          _showErrorAlert(
+            title: "Signup failed",
+            content: 'Something went very wrong',//exception,
+            onPressed: _changeBlackVisible,
+          );
+        }
+    }else{
+      _changeBlackVisible();
+      //print(Validator.validateName(fullname));
+      //print(Validator.validateNumber(number));
+      //print(Validator.validateEmail(email));
+      print(Validator.validatePassword(password));
+      _showErrorAlert(
+        title: "Signup validator failed",
+        content: 'Something went very wrong with the signup validation',//exception,
+        onPressed: _changeBlackVisible,
+      );
     }
   }
 
