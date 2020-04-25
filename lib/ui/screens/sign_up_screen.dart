@@ -141,6 +141,72 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         color: Colors.white,
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "OR",
+                        softWrap: true,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black,
+                          decoration: TextDecoration.none,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w300,
+                          fontFamily: "OpenSans",
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 14.0, horizontal: 40.0),
+                      child: CustomFlatButton(
+                        title: "Facebook Login",
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                        textColor: Colors.white,
+                        onPressed: () {
+                          _facebookSignUp(context: context);
+                        },
+                        splashColor: Colors.black12,
+                        borderColor: Color.fromRGBO(59, 89, 152, 1.0),
+                        borderWidth: 0,
+                        color: Color.fromRGBO(59, 89, 152, 1.0),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 14.0, horizontal: 40.0),
+                      child: CustomFlatButton(
+                        title: "Google Login",
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                        textColor: Colors.white,
+                        onPressed: () {
+                          _facebookSignUp(context: context);
+                        },
+                        splashColor: Colors.black12,
+                        borderColor: Colors.red,
+                        borderWidth: 0,
+                        color: Colors.red,
+                      ),
+                    ),                    
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 14.0, horizontal: 40.0),
+                      child: CustomFlatButton(
+                        title: "Twitter Login",
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                        textColor: Colors.white,
+                        onPressed: () {
+                          _facebookSignUp(context: context);
+                        },
+                        splashColor: Colors.black12,
+                        borderColor: Colors.blue,
+                        borderWidth: 0,
+                        color: Colors.blue,
+                      ),
+                    ),
                   ],
                 ),
                 SafeArea(
@@ -231,6 +297,44 @@ class _SignUpScreenState extends State<SignUpScreen> {
       _showErrorAlert(
         title: "Signup validator failed",
         content: 'Something went very wrong with the signup validation',//exception,
+        onPressed: _changeBlackVisible,
+      );
+    }
+  }
+
+  void _facebookSignUp({BuildContext context}) async {
+    try {
+      SystemChannels.textInput.invokeMethod('TextInput.hide');
+      /*_changeBlackVisible();
+      FacebookLogin facebookLogin = new FacebookLogin();
+      FacebookLoginResult result = await facebookLogin
+          .logInWithReadPermissions(['email', 'public_profile']);
+      switch (result.status) {
+        case FacebookLoginStatus.loggedIn:
+          Auth.signInWithFacebok(result.accessToken.token).then((uid) {
+            Auth.getCurrentFirebaseUser().then((firebaseUser) {
+              User user = new User(
+                firstName: firebaseUser.displayName,
+                userID: firebaseUser.uid,
+                email: firebaseUser.email ?? '',
+                profilePictureURL: firebaseUser.photoUrl ?? '',
+              );
+              Auth.addUser(user);
+              Navigator.of(context).pop();
+            });
+          });
+          break;
+        case FacebookLoginStatus.cancelledByUser:
+        case FacebookLoginStatus.error:
+          _changeBlackVisible();
+      }*/
+      Navigator.of(context).pushNamed("/home");
+    } catch (e) {
+      print("Error in facebook sign in: $e");
+      //String exception = Auth.getExceptionText(e);
+      _showErrorAlert(
+        title: "Login failed",
+        content: e.toString(),
         onPressed: _changeBlackVisible,
       );
     }
