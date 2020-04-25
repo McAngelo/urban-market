@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends  StatelessWidget {
-	const HomeScreen({Key key}): super(key: key);
+	HomeScreen({Key key}): super(key: key);
+
+	int _currentTabIndex = 0;
 
 	@override
 	Widget build(BuildContext context){
@@ -66,6 +68,54 @@ class HomeScreen extends  StatelessWidget {
 			]
 		);
 
+		/*new Center(
+		        child: new Text(
+		          'Done!',
+		          style: new TextStyle(
+		            fontWeight: FontWeight.bold,
+		            fontSize: 30.0
+		          ),
+		        ),
+	      	)*/
+
+		final _kTabPages = <Widget>[
+			Center(
+				//child: Icon(Icons.cloud, size: 64.0, color: Colors.teal),
+				child: new Text(
+		          'Done!',
+		          style: new TextStyle(
+		            fontWeight: FontWeight.bold,
+		            fontSize: 30.0
+		          ),
+		        ),
+			),
+			Center(child: Icon(Icons.alarm, size: 64.0, color: Colors.cyan)),
+			Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
+			Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
+	    ];
+
+	    final _kBottomNavBarItems = <BottomNavigationBarItem>[
+	    	BottomNavigationBarItem(icon: Icon(Icons.list), title: Text('Categories')),
+	    	BottomNavigationBarItem(icon: Icon(Icons.store), title: Text('Shops')),
+	    	BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), title: Text('Cart')),
+	    	BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('Account')),
+	    ];
+
+	    assert(_kTabPages.length == _kBottomNavBarItems.length);
+
+	    final bottomNavBar = BottomNavigationBar (
+	    	items: _kBottomNavBarItems,
+	    	currentIndex: _currentTabIndex,
+	    	type: BottomNavigationBarType.fixed,
+	    	onTap: (int index){
+	    		/*setState((){
+	    			_currentTabIndex = index;
+	    		});*/
+
+	    		_currentTabIndex = index;
+	    	}
+	    );
+
 		return new Scaffold(
 	      	appBar: new AppBar(
 	      		backgroundColor: Colors.blue[900],
@@ -78,18 +128,11 @@ class HomeScreen extends  StatelessWidget {
 		        	),
 	        	],
 	      	),
-	      	body: new Center(
-		        child: new Text(
-		          'Done!',
-		          style: new TextStyle(
-		            fontWeight: FontWeight.bold,
-		            fontSize: 30.0
-		          ),
-		        ),
-	      	),
+	      	body: _kTabPages[_currentTabIndex],
 	      	drawer: Drawer(
 	      		child: drawerItems,
-	      	)
+	      	),
+	      	bottomNavigationBar: bottomNavBar,
 	    );
 	}
 }
