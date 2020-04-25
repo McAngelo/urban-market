@@ -34,7 +34,7 @@ class HomeScreen extends  StatelessWidget {
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 				ListTile(
-					leading: Icon(Icons.business),
+					leading: Icon(Icons.store),
 					title: Text('Shops'),
 					onTap: () => Navigator.of(context).push(_NewPage(2)),
 				),
@@ -49,17 +49,17 @@ class HomeScreen extends  StatelessWidget {
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 				ListTile(
-					leading: Icon(Icons.more_vert),
+					leading: Icon(Icons.account_circle),
 					title: Text('Account'),
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 				ListTile(
-					leading: Icon(Icons.more_vert),
+					leading: Icon(Icons.library_books),
 					title: Text('Address Book'),
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
 				ListTile(
-					leading: Icon(Icons.more_vert),
+					leading: Icon(Icons.settings_applications),
 					title: Text('Settings'),
 					onTap: () => Navigator.of(context).push(_NewPage(1)),
 				),
