@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class HomeScreen extends  StatelessWidget {
 	HomeScreen({Key key}): super(key: key);
 
-	int _currentTabIndex = 0;
+	int _currentTabIndex = 1;
 
 	void _setState(int index) {
 	    /*setState(() {
