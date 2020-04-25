@@ -8,24 +8,20 @@ class HomeScreen extends  StatelessWidget {
 	      	backgroundColor: Colors.blue[900],
 	      	leading: Icon(Icons.home),
 	        title: new Text('Urban Market'),
-	        //automaticallyImplyLeading: false,
+	        automaticallyImplyLeading: true,
 	        actions: <Widget>[
 	        	IconButton(
-	        		icon: Icon(Icons.directions_bike),
+	        		icon: Icon(Icons.search),
 	        		onPressed: (){},
 	        	),
-	        	IconButton(
-	        		icon: Icon(Icons.directions_bus),
-	        		onPressed: (){},
-	        	),
-	        	PopupMenuButton(
+	        	/*PopupMenuButton(
 	        		itemBuilder: (BuildContext context){
 	        			return [
 	        				PopupMenuItem(child: Text('Boat')),
 	        				PopupMenuItem(child: Text('Train'))
 	        			];
 	        		}
-	        	)
+	        	)*/
 	        ],
 	      ),
 	      body: new Center(
