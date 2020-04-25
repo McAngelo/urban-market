@@ -6,7 +6,24 @@ class HomeScreen extends  StatelessWidget {
 	@override
 	Widget build(BuildContext context){
 
-
+		final drawerHeader =  UserAccountsDrawerHeader(
+			accountName: Text('Michael Kwame Johnson'),
+			accountEmail: Text('mcangelo200@gmail.com'),
+			currentAccountPicture: CircleAvatar(
+				child: FlutterLogo(size: 42.0),
+				backgroundColor: Colors.white
+			),
+			otherAccountsPictures: <Widget>[
+				CircleAvatar(
+					child: Text('MJ'),
+					backgroundColor: Colors.orange,
+				),
+				CircleAvatar(
+					child: Text('Mike'),
+					backgroundColor: Colors.red,
+				),
+			]
+		);
 		return new Scaffold(
 	      	appBar: new AppBar(
 	      		backgroundColor: Colors.blue[900],
