@@ -158,10 +158,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 14.0, horizontal: 40.0),
+                          vertical: 5.0, horizontal: 40.0),
                       child: CustomFlatButton(
                         title: "Facebook Login",
-                        fontSize: 22,
+                        fontSize: 20,
                         fontWeight: FontWeight.w700,
                         textColor: Colors.white,
                         onPressed: () {
@@ -175,10 +175,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 14.0, horizontal: 40.0),
+                          vertical: 5.0, horizontal: 40.0),
                       child: CustomFlatButton(
                         title: "Google Login",
-                        fontSize: 22,
+                        fontSize: 20,
                         fontWeight: FontWeight.w700,
                         textColor: Colors.white,
                         onPressed: () {
@@ -192,10 +192,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),                    
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 14.0, horizontal: 40.0),
+                          vertical: 5.0, horizontal: 40.0),
                       child: CustomFlatButton(
                         title: "Twitter Login",
-                        fontSize: 22,
+                        fontSize: 20,
                         fontWeight: FontWeight.w700,
                         textColor: Colors.white,
                         onPressed: () {
