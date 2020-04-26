@@ -1,6 +1,13 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
+import './market_screens/account.dart';
+import './market_screens/address_book.dart';
+import './market_screens/cart.dart';
 import './market_screens/categories.dart';
+import './market_screens/location.dart';
+import './market_screens/orders.dart';
+import './market_screens/settings.dart';
+import './market_screens/shops.dart';
 
 class HomeScreen extends StatefulWidget {
 	const HomeScreen({Key key }): super(key: key);
@@ -77,9 +84,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
 		final _kTabPages = <Widget>[
 			CategoriesScreen(),
-			Center(child: Icon(Icons.store, size: 265.0, color: Colors.cyan)),
-			Center(child: Icon(Icons.shopping_cart, size: 265.0, color: Colors.blue)),
-			Center(child: Icon(Icons.account_circle, size: 265.0, color: Colors.blue)),
+			ShopsScreen(),
+			CartScreen(),
+			AccountScreen(),
 	    ];
 
 	    final _kBottomNavBarItems = <BottomNavigationBarItem>[

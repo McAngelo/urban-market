@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({Key key}) : super(key: key);
+class LocationScreen extends StatelessWidget {
+  const LocationScreen({Key key}) : super(key: key);
 
   //final Choice choice;
 
@@ -10,7 +10,7 @@ class CategoriesScreen extends StatelessWidget {
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return Container(
 	      width: double.infinity,
-        //height: double.infinity,
+        height: double.infinity,
         decoration: BoxDecoration(
         	image: DecorationImage(
             	image: AssetImage('assets/images/home_background.jpg'),
@@ -23,7 +23,7 @@ class CategoriesScreen extends StatelessWidget {
 	          	// The elevation determines shade.
 	          	elevation: 10.0,
 	          	child: Container(
-	            	height: 100.0,
+	            	height: 50.0,
 	            	child: Row(
 	              		children: <Widget>[
 	                		Expanded(
