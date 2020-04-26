@@ -12,13 +12,11 @@ class AccountScreen extends StatelessWidget {
 	      width: double.infinity,
         height: double.infinity,
         
-        child: SafeArea(
-            child: Card(
-	          	color: Colors.white,
-	          	// The elevation determines shade.
-	          	elevation: 10.0,
-	          	child: Center(child: Icon(Icons.account_circle, size: 265.0, color: Colors.blue)),
-	        ),
+        child: Card(
+            color: Colors.white,
+            // The elevation determines shade.
+            elevation: 10.0,
+            child: Center(child: Icon(Icons.account_circle, size: 265.0, color: Colors.blue)),
         ),
     );
   }

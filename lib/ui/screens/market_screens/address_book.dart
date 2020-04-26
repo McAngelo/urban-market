@@ -11,22 +11,20 @@ class AddressBookScreen extends StatelessWidget {
     return Container(
 	    width: double.infinity,
         height: double.infinity,
-        child: SafeArea(
-            child: Card(
-	          	color: Colors.white,
-	          	// The elevation determines shade.
-	          	elevation: 10.0,
-	          	child: Container(
-	            	height: 50.0,
-	            	child: Row(
-	              		children: <Widget>[
-	                		Expanded(
-	                  			child: Text('Card 1'),
-	                		),
-	              		],
-	            	),
-	          	),
-	        ),
+        child: Card(
+          	color: Colors.white,
+          	// The elevation determines shade.
+          	elevation: 10.0,
+          	child: Container(
+            	height: 50.0,
+            	child: Row(
+              		children: <Widget>[
+                		Expanded(
+                  			child: Text('Card 1'),
+                		),
+              		],
+            	),
+          	),
         ),
     );
   }
