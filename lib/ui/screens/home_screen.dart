@@ -91,9 +91,9 @@ class _HomeScreenState extends State<HomeScreen> {
 	            ),
 	          ),
 	        ),
-			Center(child: Icon(Icons.alarm, size: 64.0, color: Colors.cyan)),
-			Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
-			Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
+			Center(child: Icon(Icons.store, size: 265.0, color: Colors.cyan)),
+			Center(child: Icon(Icons.shopping_cart, size: 265.0, color: Colors.blue)),
+			Center(child: Icon(Icons.account_circle, size: 265.0, color: Colors.blue)),
 	    ];
 
 	    final _kBottomNavBarItems = <BottomNavigationBarItem>[
