@@ -41,14 +41,9 @@ class ShopsScreen extends StatelessWidget {
 
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return Container(
-	    width: double.infinity,
+	      width: double.infinity,
         //height: double.infinity,
-        decoration: BoxDecoration(
-        	image: DecorationImage(
-            	image: AssetImage('assets/images/home_background.jpg'),
-            	fit: BoxFit.cover,
-          	),
-        ),
+        
         child: SafeArea(
             child: Container(
                 height: 100.0,
