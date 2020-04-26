@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
 	    	}
 	    );
 
-		return new Scaffold(
+		/*return new Scaffold(
 	      	appBar: new AppBar(
 	      		//backgroundColor: Colors.blue[900],
 	      		backgroundColor: Colors.transparent,
@@ -129,7 +129,49 @@ class _HomeScreenState extends State<HomeScreen> {
 	      		child: drawerItems,
 	      	),
 	      	bottomNavigationBar: bottomNavBar,
-	    );
+	    );*/
+
+	    return Scaffold(
+	    	body: DefaultTabController(
+	    		length: 2,
+	    		child: NestedScrollView(
+	    			headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+	    				return <Widget>[
+	    				SliverAppBar(
+	    					expandedHeight: 200.0,
+	    					floating: false,
+	    					pinned: true,
+	    					flexibleSpace: FlexibleSpaceBar(
+	    						centerTitle: true,
+	    						title: Text("Urban Market",
+	    							style: TextStyle(
+	    								color: Colors.white,
+	    								fontSize: 16.0,
+	    								)),
+	    						background: Image.asset(
+	    							'assets/images/home_background.jpg',
+	    							fit: BoxFit.cover,
+	    							)),
+	    						actions: <Widget>[
+						          IconButton(
+						            icon: Icon(Icons.search),
+						            tooltip: 'Open shopping cart',
+						            onPressed: () {
+						              // handle the press
+						            },
+						          ),
+						        ],
+	    					),
+	    				];
+	    			},
+    				body: _kTabPages[this._currentTabIndex]
+	    		),
+	    	),
+			drawer: Drawer(
+				child: drawerItems,
+				),
+			bottomNavigationBar: bottomNavBar,
+			);
 	}
 }
 
