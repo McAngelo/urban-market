@@ -76,21 +76,33 @@ class _HomeScreenState extends State<HomeScreen> {
 		);
 
 		final _kTabPages = <Widget>[
-			Card(
-	          color: Colors.red,
-	          // The elevation determines shade.
-	          elevation: 20.0,
-	          child: Container(
-	            height: 100.0,
-	            child: Row(
-	              children: <Widget>[
-	                Expanded(
-	                  child: Text('Card 1'),
-	                ),
-	              ],
-	            ),
-	          ),
-	        ),
+			Container(
+			    width: double.infinity,
+		        height: double.infinity,
+		        decoration: BoxDecoration(
+		        	image: DecorationImage(
+		            	image: AssetImage('assets/images/home_background.jpg'),
+		            	fit: BoxFit.cover,
+		          	),
+		        ),
+		        child: SafeArea(
+		            child: Card(
+			          color: Colors.white,
+			          // The elevation determines shade.
+			          elevation: 20.0,
+			          child: Container(
+			            height: 100.0,
+			            child: Row(
+			              children: <Widget>[
+			                Expanded(
+			                  child: Text('Card 1'),
+			                ),
+			              ],
+			            ),
+			          ),
+			        ),
+		        ),
+		    ),
 			Center(child: Icon(Icons.store, size: 265.0, color: Colors.cyan)),
 			Center(child: Icon(Icons.shopping_cart, size: 265.0, color: Colors.blue)),
 			Center(child: Icon(Icons.account_circle, size: 265.0, color: Colors.blue)),
@@ -118,7 +130,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
 		return new Scaffold(
 	      	appBar: new AppBar(
-	      		backgroundColor: Colors.blue[900],
+	      		//backgroundColor: Colors.blue[900],
+	      		backgroundColor: Colors.transparent,
+        		elevation: 0.0,
 	        	title: new Text('Urban Market'),
 	        	automaticallyImplyLeading: true,
 	        	actions: <Widget>[
@@ -128,6 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
 		        	),
 	        	],
 	      	),
+	      	extendBodyBehindAppBar: true,
 	      	body: _kTabPages[this._currentTabIndex],
 	      	drawer: Drawer(
 	      		child: drawerItems,
