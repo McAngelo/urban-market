@@ -42,14 +42,11 @@ class ShopsScreen extends StatelessWidget {
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return Container(
 	      width: double.infinity,
-        //height: double.infinity,
+        height: double.infinity,
         
-        child: SafeArea(
-            child: Container(
-                height: 100.0,
-                child: ListView(children: listTiles),
-              ),
-          
+        child: Container(
+          height: 100.0,
+          child: ListView(children: listTiles),
         ),
     );
   }

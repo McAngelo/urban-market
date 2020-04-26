@@ -11,12 +11,6 @@ class AddressBookScreen extends StatelessWidget {
     return Container(
 	    width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
-        	image: DecorationImage(
-            	image: AssetImage('assets/images/home_background.jpg'),
-            	fit: BoxFit.cover,
-          	),
-        ),
         child: SafeArea(
             child: Card(
 	          	color: Colors.white,
