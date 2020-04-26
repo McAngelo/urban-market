@@ -1,25 +1,16 @@
+import 'dart:core';
 import 'package:flutter/material.dart';
 
 
-/*class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
 	const HomeScreen({Key key }): super(key: key);
 
 	@override
-	State<StatefulWidget> createState() => _HomeScreenState();
-}*/
-class HomeScreen extends  StatelessWidget {
-	HomeScreen({Key key}): super(key: key);
+	_HomeScreenState createState() => _HomeScreenState();
+}
 
-	int _currentTabIndex = 1;
-
-	void _setState(int index) {
-	    /*setState(() {
-	      _blackVisible = !_blackVisible;
-	    });*/
-	    _currentTabIndex = index;
-
-	    print(_currentTabIndex);
-	}
+class _HomeScreenState extends State<HomeScreen> {
+	int _currentTabIndex = 0;
 
 	@override
 	Widget build(BuildContext context){
@@ -85,16 +76,21 @@ class HomeScreen extends  StatelessWidget {
 		);
 
 		final _kTabPages = <Widget>[
-			Center(
-				//child: Icon(Icons.cloud, size: 64.0, color: Colors.teal),
-				child: new Text(
-		          'Done!',
-		          style: new TextStyle(
-		            fontWeight: FontWeight.bold,
-		            fontSize: 30.0
-		          ),
-		        ),
-			),
+			Card(
+	          color: Colors.red,
+	          // The elevation determines shade.
+	          elevation: 20.0,
+	          child: Container(
+	            height: 100.0,
+	            child: Row(
+	              children: <Widget>[
+	                Expanded(
+	                  child: Text('Card 1'),
+	                ),
+	              ],
+	            ),
+	          ),
+	        ),
 			Center(child: Icon(Icons.alarm, size: 64.0, color: Colors.cyan)),
 			Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
 			Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
@@ -114,14 +110,9 @@ class HomeScreen extends  StatelessWidget {
 	    	currentIndex: _currentTabIndex,
 	    	type: BottomNavigationBarType.fixed,
 	    	onTap: (int index){
-	    		/*setState((){
+	    		setState((){
 	    			_currentTabIndex = index;
-	    		});*/
-	    		print(index);
-
-	    		_setState(index);
-
-	    		//_currentTabIndex = index;
+	    		});
 	    	}
 	    );
 
